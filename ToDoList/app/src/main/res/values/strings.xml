@@ -1,0 +1,18 @@
+<resources>
+    <!-- General -->
+    <string name="app_name">ToDo</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Home -->
+    <string name="home_info_text">Bem vindo!\n
+        1 - Para criar uma nova lista, clicar no botão +.\n
+        2 - Para editar uma lista, clicar no ícone de lápis na lista desejada.\n
+        3 - Para deletar uma lista, clicar no ícone de lixeira na lista desejada.</string>
+
+    <!-- Edit -->
+    <string name="edit_save_message">Lista criada com sucesso!</string>
+    <string name="field_id">Id</string>
+    <string name="field_name">Nome</string>
+    <string name="edit">Editar</string>
+
+</resources>

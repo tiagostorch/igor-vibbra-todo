@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.igordam.todo.ui.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_homeEdit"
+            app:destination="@id/homeEdit">
+            <argument
+                android:name="id"
+                app:argType="integer"/>
+            <argument
+                android:name="name"
+                app:argType="string"/>
+        </action>
+        <action
+            android:id="@+id/action_homeFragment_to_itemList"
+            app:destination="@id/itemList" >
+            <argument
+                android:name="id"
+                app:argType="integer"/>
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/homeEdit"
+        android:name="com.igordam.todo.ui.home.EditToDoFragment"
+        android:label="fragment_edit"
+        tools:layout="@layout/fragment_edit_to_do">
+        <argument
+            android:name="id"
+            app:argType="integer"
+            android:defaultValue="0"/>
+        <argument
+            android:name="name"
+            app:argType="string"
+            android:defaultValue=" "/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/itemList"
+        android:name="com.igordam.todo.ui.item.ItemFragment"
+        android:label="fragment_item"
+        tools:layout="@layout/fragment_item">
+        <argument
+            android:name="id"
+            app:argType="integer"
+            android:defaultValue="0"/>
+    </fragment>
+
+</navigation>

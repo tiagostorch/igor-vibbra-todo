@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/edit_layout"
+    tools:context=".ui.home.EditToDoFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="@string/edit"
+        app:titleTextColor="@color/white"
+        app:navigationIcon="@drawable/ic_back_24"
+        android:background="@color/purple_700"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edit_id_todo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="@string/field_id"
+        android:enabled="false"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_item" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edit_name_todo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:hint="@string/field_name"
+        app:layout_constraintTop_toBottomOf="@+id/edit_id_todo" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/image_button_save"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_save_24"
+        android:tint="@color/purple_700"
+        android:background="@null"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
